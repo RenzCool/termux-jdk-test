@@ -35,11 +35,11 @@ else
 	esac
 
 	#Actual installation
-	ee "\e[32m[*] \e[34mDownloading JDK-17 (~70Mb) for ${archname}...  🕛This will take some time, so better make a coffee.🕛"
+	ee "\e[32m[*] \e[34mDownloading JDK-17 (~173Mb) for ${archname}...  🕛This will take some time, so better make a coffee.🕛"
 	wget https://github.com/RenzCool/termux-jdk-test/releases/download/${tag}/jdk-17.0.8_linux${archname}_bin.tar.gz -q
 
 	ee "\e[32m[*] \e[34mMoving JDK to system..."
-	mv jdk8_${archname}.tar.gz $PREFIX/share
+	mv jdk-17.0.8_linux${archname}_bin.tar.gz $PREFIX/share
 
 	ee "\e[32m[*] \e[34mExtracting JDK..."
 	cd $PREFIX/share
