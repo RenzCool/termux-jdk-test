@@ -8,7 +8,7 @@ alias ee='echo -e'
 #Greetings
 echo
 ee "\e[93mThis script will install Java in Termux."
-ee "\e[93mLibraries compiled by \e[32mHax4us\e[93m, script written by \e[32mHax4us \e[93mand \e[32mMasterDevX\e[93m."
+ee "\e[93mLibraries compiled by \e[32mRenz\e[93m, script written by \e[32mRenz \e[93mand \e[32mMyself\e[93m."
 echo
 
 #Checking for existing Java installation
@@ -46,7 +46,7 @@ else
 	tar -xhf jdk-17.0.8_linux${archname}_bin.tar.gz
 
 	ee "\e[32m[*] \e[34mSeting-up %JAVA_HOME%..."
-	export JAVA_HOME=$PREFIX/share/jdk8
+	export JAVA_HOME=$PREFIX/share/jdk-17.0.8
 	echo "export JAVA_HOME=$PREFIX/share/jdk-17.0.8" >> $HOME/.profile
 
 	ee "\e[32m[*] \e[34mCoping Java wrapper scripts to bin..."
@@ -54,7 +54,7 @@ else
 	cp bin/* $PREFIX/bin
 
 	ee "\e[32m[*] \e[34mCleaning up temporary files..."
-	rm -rf $HOME/install
+	rm -rf $HOME/install.sh
 	rm -rf $PREFIX/share/jdk-17.0.8_linux${archname}_bin.tar.gz
 	rm -rf $PREFIX/share/bin
 
